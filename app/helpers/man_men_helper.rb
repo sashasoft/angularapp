@@ -1,0 +1,2 @@
+module ManMenHelper
+end

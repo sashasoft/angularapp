@@ -1,0 +1,27 @@
+<br/>
+<div class="row">
+  <div class="col-md-12">
+    <a class="btn btn-primary" href="#/mans/new">Create a man</a>
+    <h3 class="block">Mans</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>E-mail</th>
+        <th>Age</th>
+        <th></th>
+      </tr>
+      <tr ng-hide="mans.length" >
+          <td colspan="5">No mans found, Please create one.</td>
+      </tr>
+      <tr ng-show="mans.length" ng-repeat="man in mans" >
+        <td><a href="#/mans/{{man.id}}">{{man.name}}</a></td>
+        <td>{{man.email}}</td>
+        <td>{{man.age}}</td>
+        <td>
+            <a href="#/mans/{{man.id}}/edit">Edit</a> | <a href="" ng-click="deleteMan(man.id)">Remove</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+

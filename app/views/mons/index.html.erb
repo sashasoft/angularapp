@@ -1,0 +1,23 @@
+<h1>Listing mons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mons.each do |mon| %>
+      <tr>
+        <td><%= link_to 'Show', mon %></td>
+        <td><%= link_to 'Edit', edit_mon_path(mon) %></td>
+        <td><%= link_to 'Destroy', mon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mon', new_mon_path %>

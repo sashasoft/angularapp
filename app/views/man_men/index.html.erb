@@ -1,0 +1,29 @@
+<h1>Listing man_men</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @man_men.each do |man_man| %>
+      <tr>
+        <td><%= man_man.name %></td>
+        <td><%= man_man.email %></td>
+        <td><%= man_man.age %></td>
+        <td><%= link_to 'Show', man_man %></td>
+        <td><%= link_to 'Edit', edit_man_man_path(man_man) %></td>
+        <td><%= link_to 'Destroy', man_man, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Man man', new_man_man_path %>
